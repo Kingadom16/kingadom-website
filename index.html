@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KINGADOM STUDIOS — cinematic videography and video editing.">
+  <title>KINGADOM STUDIOS — Visuals that speak.</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://images.unsplash.com; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta name="theme-color" content="#09090b">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KINGADOM STUDIOS">
+  <meta property="og:title" content="KINGADOM STUDIOS — Visuals that speak.">
+  <meta property="og:description" content="Cinematic videography and video editing in Accra, Ghana. Explore my work and book your next project.">
+  <meta property="og:image" content="/images/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="KINGADOM STUDIOS — Visuals that speak. Videography and editing in Accra, Ghana.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KINGADOM STUDIOS — Visuals that speak.">
+  <meta name="twitter:description" content="Cinematic videography and video editing in Accra, Ghana.">
+  <meta name="twitter:image" content="/images/social-preview.png">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fluid-hero.css?v=2">
+  <link rel="stylesheet" href="liquid-glass.css">
+</head>
+<body>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-aperture"></div>
+    <div class="loader-mark"><span class="loader-k">K<span class="loader-crown">👑</span></span><p>KINGADOM <em>STUDIOS</em></p><small>Visuals that speak.</small></div>
+    <div class="loader-track"><span></span></div>
+  </div>
+  <button class="intro-skip" type="button">Skip intro</button>
+  <button class="motion-toggle" type="button" aria-pressed="false"><span class="motion-icon" aria-hidden="true">Ⅱ</span><span class="motion-label">Pause motion</span></button>
+  <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="top">
+    <a class="wordmark" href="#home" aria-label="KINGADOM Studios home">KINGADOM <span>STUDIOS</span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#work">Work</a><a href="#meet">Meet KINGADOM</a><a href="#services">Services</a><a href="#contact">Book me</a>
+      <a class="portal-link" hidden href="#portal">Client portal <b>↗</b></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-fluid" id="home">
+      <video class="hero-showreel" id="hero-showreel" muted loop playsinline preload="none" poster="images/homepage-reel-poster.jpg" aria-hidden="true" tabindex="-1" data-src="videos/homepage-showreel.mp4"></video>
+      <canvas id="hero-fluid" class="fluid-canvas" aria-hidden="true"></canvas>
+      <div class="fluid-shade" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-spotlight" aria-hidden="true"></div>
+      <div class="hero-orbit" aria-hidden="true"></div>
+      <!-- Your camera and gimbal photos are kept locally in /images. -->
+      <figure class="equip equip-camera" data-depth="20" aria-hidden="true"><img src="images/camera-exploded.jpg" alt=""><figcaption>KINGADOM CAMERA / 01</figcaption></figure>
+      <figure class="equip equip-lens" data-depth="-13" aria-hidden="true"><img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?auto=format&fit=crop&w=500&q=85" alt=""><figcaption>GLASS / 50MM</figcaption></figure>
+      <figure class="equip equip-timeline" data-depth="9" aria-hidden="true"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=650&q=85" alt=""><figcaption>EDIT / TIMELINE</figcaption></figure>
+      <figure class="equip equip-tripod" data-depth="-18" aria-hidden="true"><img src="images/gimbal-wireframe.jpg" alt=""><figcaption>DJI RS3 PRO / RIG</figcaption></figure>
+      <figure class="equip equip-card" data-depth="12" aria-hidden="true"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400&q=85" alt=""><figcaption>MEDIA / 4K</figcaption></figure>
+      <figure class="equip equip-mouse" data-depth="-8" aria-hidden="true"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=500&q=85" alt=""><figcaption>MONITOR</figcaption></figure>
+      <!-- Supplied logos stay local; their inner visual floats independently of pointer movement. -->
+      <div class="app-cloud" aria-hidden="true"><span class="app-capcut"><img src="images/logo-capcut.webp" alt=""></span><span class="app-aftereffects"><img src="images/logo-after-effects.webp" alt=""></span><span class="app-tiktok"><img src="images/logo-tiktok.webp" alt=""></span><span class="app-instagram"><img src="images/logo-instagram.png" alt=""></span><span class="app-alight"><img src="images/logo-alight-motion.webp" alt=""></span><span class="app-snap"><img src="images/logo-snapchat.webp" alt=""></span></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">Independent visual creator <span></span> Accra, Ghana / Ghana-based projects</p>
+        <h1 class="hero-title" aria-label="KINGADOM STUDIOS"><span class="hero-name-line" aria-hidden="true"><span class="kingadom-name">K<span class="crowned-letter">I</span>NGADOM</span></span><span class="hero-studio-line" aria-hidden="true"><span class="accent">STUDIOS</span></span></h1>
+        <div class="hero-bottom reveal">
+          <p>Videos with a pulse. I create cinematic films, sharp edits and visual worlds made to move people.</p>
+          <div class="hero-actions"><a class="button" href="#work">View my work <b>↓</b></a><a class="text-link" href="#contact">Book a shoot <b>↗</b></a></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#work"><span></span> Scroll to explore</a>
+    </section>
+
+    <section class="meet section" id="meet"><div class="meet-orbit" aria-hidden="true">K • S • K • S •</div><p class="eyebrow reveal">Meet KINGADOM <span></span> 01</p><h2 class="reveal">YOUR VISION.<br><em>MY FRAME.</em></h2><p class="meet-copy reveal">I’m KINGADOM, the creative behind KINGADOM STUDIOS. I turn real moments, brands and bold ideas into cinematic visual stories with energy, detail and purpose.</p><a class="button magnetic reveal" href="#contact">Work with me <b>↗</b></a></section>
+
+    <section class="work section" id="work">
+      <div class="section-heading reveal"><p class="eyebrow">Selected frames <span></span></p><h2>MY <em>WORK</em></h2><p>Stories in motion—made to be felt long after the final frame.</p></div>
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button class="active" data-filter="all">All</button><button data-filter="events">Events</button><button data-filter="social">Social</button><button data-filter="editing">Editing</button>
+      </div>
+      <p class="filter-status" id="filter-status" role="status" aria-live="polite">Showing all projects</p>
+      <div class="project-grid">
+        <!-- Replace the video files in /videos with your own footage. -->
+        <article class="project-card reveal" data-category="events" data-video="videos/event-02.mp4" data-title="Oakland Awards Night ’26" data-description="Event coverage / captured in the moment">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/event-02.jpg" data-preview="videos/previews/event-02.mp4"></video><div class="media-placeholder tone-2"><span>03</span><p>Events</p></div><button class="play" aria-label="Play Oakland Awards Night 26">▶</button></div><div class="project-meta"><p>Events / 2026</p><h3>Oakland Awards Night ’26</h3><span>Captured in the moment <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="events" data-video="videos/event-03.mp4" data-title="Oakland Awards Night ’26" data-description="Event coverage / a night in motion">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/event-03.jpg" data-preview="videos/previews/event-03.mp4"></video><div class="media-placeholder tone-2"><span>04</span><p>Events</p></div><button class="play" aria-label="Play Oakland Awards Night 26">▶</button></div><div class="project-meta"><p>Events / 2026</p><h3>Oakland Awards Night ’26</h3><span>A night in motion <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="events" data-video="videos/presec-speech-day-01.mp4" data-title="Presec Speech Day" data-description="Event coverage / speech day — film one">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/presec-speech-day-01.jpg" data-preview="videos/previews/presec-speech-day-01.mp4"></video><div class="media-placeholder tone-2"><p>Events</p></div><button class="play" aria-label="Play Presec Speech Day — film one">▶</button></div><div class="project-meta"><p>Events</p><h3>Presec Speech Day</h3><span>Speech day / film one <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="events" data-video="videos/presec-speech-day-02.mp4" data-title="Presec Speech Day" data-description="Event coverage / speech day — film two">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/presec-speech-day-02.jpg" data-preview="videos/previews/presec-speech-day-02.mp4"></video><div class="media-placeholder tone-2"><p>Events</p></div><button class="play" aria-label="Play Presec Speech Day — film two">▶</button></div><div class="project-meta"><p>Events</p><h3>Presec Speech Day</h3><span>Speech day / film two <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="events" data-video="videos/vintage-gala.mp4" data-title="Vintage Gala" data-description="Event coverage / Vintage Gala">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/vintage-gala.jpg" data-preview="videos/previews/vintage-gala.mp4"></video><div class="media-placeholder tone-2"><p>Events</p></div><button class="play" aria-label="Play Vintage Gala">▶</button></div><div class="project-meta"><p>Events</p><h3>Vintage Gala</h3><span>A night to remember <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="events" data-video="videos/presec-talent-show.mp4" data-title="Presec Talent Show" data-description="Event coverage / Presec Talent Show">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/presec-talent-show.jpg" data-preview="videos/previews/presec-talent-show.mp4"></video><div class="media-placeholder tone-2"><p>Events</p></div><button class="play" aria-label="Play Presec Talent Show">▶</button></div><div class="project-meta"><p>Events</p><h3>Presec Talent Show</h3><span>Talent in the spotlight <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="events" data-video="videos/supercar-spectacle-26.mp4" data-title="Supercar Spectacle ’26" data-description="Event coverage / Supercar Spectacle ’26">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/supercar-spectacle-26.jpg" data-preview="videos/previews/supercar-spectacle-26.mp4"></video><div class="media-placeholder tone-2"><p>Events</p></div><button class="play" aria-label="Play Supercar Spectacle ’26">▶</button></div><div class="project-meta"><p>Events / 2026</p><h3>Supercar Spectacle ’26</h3><span>Supercars in motion <b>↗</b></span></div>
+        </article>
+        <article class="project-card wide reveal" data-category="social" data-video="videos/cafe-boho.mp4" data-title="Cafe Boho" data-description="Social media content / Cafe Boho">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/cafe-boho.jpg" data-preview="videos/previews/cafe-boho.mp4"></video><div class="media-placeholder tone-5"><p>Social</p></div><button class="play" aria-label="Play Cafe Boho">▶</button></div><div class="project-meta"><p>Social media</p><h3>Cafe Boho</h3><span>A taste of Cafe Boho <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="editing" data-video="videos/editing-gta-trailer.mp4" data-title="GTA trailer" data-description="Video editing / GTA trailer">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/editing-gta-trailer.jpg" data-preview="videos/previews/editing-gta-trailer.mp4"></video><div class="media-placeholder tone-6"><p>Editing</p></div><button class="play" aria-label="Play GTA trailer">▶</button></div><div class="project-meta"><p>Editing</p><h3>GTA trailer</h3><span>Watch the edit <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="editing" data-video="videos/editing-ready-player-one.mp4" data-title="Ready Player One" data-description="Video editing / Ready Player One">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/editing-ready-player-one.jpg" data-preview="videos/previews/editing-ready-player-one.mp4"></video><div class="media-placeholder tone-6"><p>Editing</p></div><button class="play" aria-label="Play Ready Player One">▶</button></div><div class="project-meta"><p>Editing</p><h3>Ready Player One</h3><span>Watch the edit <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="editing" data-video="videos/editing-bombele-bw.mp4" data-title="Bombele — Black &amp; White" data-description="Video editing / Bombele — Black &amp; White">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/editing-bombele-bw.jpg" data-preview="videos/previews/editing-bombele-bw.mp4"></video><div class="media-placeholder tone-6"><p>Editing</p></div><button class="play" aria-label="Play Bombele — Black &amp; White">▶</button></div><div class="project-meta"><p>Editing</p><h3>Bombele — Black &amp; White</h3><span>Watch the edit <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="editing" data-video="videos/editing-bombele-coloured.mp4" data-title="Bombele — Coloured" data-description="Video editing / Bombele — Coloured">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/editing-bombele-coloured.jpg" data-preview="videos/previews/editing-bombele-coloured.mp4"></video><div class="media-placeholder tone-6"><p>Editing</p></div><button class="play" aria-label="Play Bombele — Coloured">▶</button></div><div class="project-meta"><p>Editing</p><h3>Bombele — Coloured</h3><span>Watch the edit <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="editing" data-video="videos/editing-asake.mp4" data-title="ASAKE" data-description="Music edit / rhythm, colour and story">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/editing-asake.jpg" data-preview="videos/previews/editing-asake.mp4"></video><div class="media-placeholder tone-6"><span>06</span><p>Editing</p></div><button class="play" aria-label="Play ASAKE">▶</button></div><div class="project-meta"><p>Editing / 2026</p><h3>ASAKE</h3><span>Every cut counts <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="editing" data-video="videos/editing-demon-slayer-4k.mp4" data-title="Demon Slayer" data-description="Anime edit / sharp cuts and colour work">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/editing-demon-slayer-4k.jpg" data-preview="videos/previews/editing-demon-slayer-4k.mp4"></video><div class="media-placeholder tone-6"><span>07</span><p>Editing</p></div><button class="play" aria-label="Play Demon Slayer">▶</button></div><div class="project-meta"><p>Editing / 2026</p><h3>Demon Slayer</h3><span>Sharp cuts, vivid worlds <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="editing" data-video="videos/editing-demon-slayer-ashawo.mp4" data-title="Demon Slayer x Ashawo" data-description="Anime edit / energy in every frame">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/editing-demon-slayer-ashawo.jpg" data-preview="videos/previews/editing-demon-slayer-ashawo.mp4"></video><div class="media-placeholder tone-6"><span>08</span><p>Editing</p></div><button class="play" aria-label="Play Demon Slayer x Ashawo">▶</button></div><div class="project-meta"><p>Editing / 2026</p><h3>Demon Slayer x Ashawo</h3><span>Energy in every frame <b>↗</b></span></div>
+        </article>
+        <article class="project-card reveal" data-category="editing" data-video="videos/editing-kingadom.mp4" data-title="Ghana Auto Shows" data-description="Video edit / a KINGADOM original">
+          <div class="project-media"><video class="has-poster" muted loop playsinline preload="none" poster="images/video-posters/editing-kingadom.jpg" data-preview="videos/previews/editing-kingadom.mp4"></video><div class="media-placeholder tone-6"><span>09</span><p>Editing</p></div><button class="play" aria-label="Play Ghana Auto Shows">▶</button></div><div class="project-meta"><p>Editing / 2026</p><h3>Ghana Auto Shows</h3><span>Made to move <b>↗</b></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section" id="about"><div class="about-image reveal"><img src="images/director-kingadom.jpg" alt="Meet KINGADOM — Director and Editor" loading="lazy" style="position: relative; height: auto; object-fit: contain; display: block;"><div class="image-fallback">YOUR<br>PORTRAIT</div><span>Director / Editor</span></div><div class="about-copy"><p class="eyebrow reveal">The person behind the frame <span></span> 02</p><h2 class="reveal">I CREATE<br><em>THE FEELING.</em></h2><p class="lead reveal">I’m KINGADOM STUDIOS, a videography and editing studio focused on cinematic visuals, storytelling and content that earns attention.</p><div class="about-notes"><div class="reveal"><b>THE STORY</b><p>Every project starts with curiosity: finding the details that make an ordinary moment unforgettable.</p></div><div class="reveal"><b>THE STYLE</b><p>Intentional, atmospheric and rhythm-led—equal parts polish and raw energy.</p></div><div class="reveal"><b>THE GOAL</b><p>To make work that moves brands, people and culture forward.</p></div></div></div></section>
+
+    <section class="services section" id="services"><div class="section-heading reveal"><p class="eyebrow">What I bring to the table <span></span> 03</p><h2>MADE FOR<br><em>MOVEMENT.</em></h2></div><div class="service-list">
+      <article class="service reveal"><span class="service-number">01</span><span class="service-icon">◉</span><div><h3>Videography</h3><p>Cinematic footage that gives your idea a living, breathing point of view.</p></div><button class="service-book" type="button" data-service="Videography" aria-label="Book Videography">Book <span aria-hidden="true">↗</span></button></article>
+      <article class="service reveal"><span class="service-number">02</span><span class="service-icon">✦</span><div><h3>Event Coverage</h3><p>Energy, atmosphere and the moments no one wants to forget.</p></div><button class="service-book" type="button" data-service="Event coverage" aria-label="Book Event Coverage">Book <span aria-hidden="true">↗</span></button></article>
+      <article class="service reveal"><span class="service-number">03</span><span class="service-icon">⌁</span><div><h3>Automotive Films</h3><p>Detail-driven motion for machines made to be admired.</p></div><button class="service-book" type="button" data-service="Automotive videography" aria-label="Book Automotive Films">Book <span aria-hidden="true">↗</span></button></article>
+      <article class="service reveal"><span class="service-number">04</span><span class="service-icon">✂</span><div><h3>Video Editing</h3><p>Footage shaped into a sharp narrative with pace, colour and purpose.</p></div><button class="service-book" type="button" data-service="Video editing" aria-label="Book Video Editing">Book <span aria-hidden="true">↗</span></button></article>
+      <article class="service reveal"><span class="service-number">05</span><span class="service-icon">▣</span><div><h3>Social Content</h3><p>Scroll-stopping videos designed for the way audiences watch today.</p></div><button class="service-book" type="button" data-service="Social media content" aria-label="Book Social Content">Book <span aria-hidden="true">↗</span></button></article>
+      <article class="service reveal"><span class="service-number">06</span><span class="service-icon">▷</span><div><h3>Promotional Videos</h3><p>A stronger visual voice for your next launch, story or campaign.</p></div><button class="service-book" type="button" data-service="Promotional video" aria-label="Book Promotional Videos">Book <span aria-hidden="true">↗</span></button></article>
+    </div></section>
+
+
+    <section class="portal section" id="portal" hidden><p class="eyebrow reveal">For collaborators <span></span> 05</p><div class="portal-inner reveal"><div><h2>CLIENT<br><em>PORTAL.</em></h2><p>Private client delivery is coming soon. A refined space to review, download and share your finished work.</p></div><span class="portal-orbit">SOON <i>✦</i> SOON <i>✦</i></span></div></section>
+
+    <section class="contact section" id="contact"><p class="eyebrow reveal">Start a new story <span></span> 06</p><h2 class="reveal">LET’S CREATE<br><em>SOMETHING.</em></h2><div class="contact-layout"><div class="contact-info reveal"><p>Have a vision in mind? Tell me about it. I’m ready when you are.</p><a class="email-link" href="mailto:adombrobbey@gmail.com">adombrobbey@gmail.com <b>↗</b></a><a class="whatsapp" href="https://wa.me/233545196838" target="_blank" rel="noopener">WhatsApp <b>↗</b></a><button class="quiet-button" id="copy-email" type="button">Copy email address</button><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p><textarea class="copy-fallback" id="copy-fallback" aria-label="Text to copy" readonly hidden></textarea><small>Based in Accra. Available for projects within Ghana only.</small></div>
+<form class="booking-form reveal" id="booking-form"><div class="booking-selection" id="booking-selection" hidden><p id="booking-selection-text" role="status"></p><button type="button" class="quiet-button" id="clear-reference">Remove reference</button></div><input type="hidden" name="reference" id="project-reference" value=""><div class="form-row"><label>Name<input name="name" required placeholder="Your name"></label><label>Email<input type="email" name="email" required placeholder="you@email.com"></label></div><div class="form-row"><label>Phone<input name="phone" placeholder="Your number"></label><label>Service<select name="service"><option value="">Choose a service</option><option>Videography</option><option>Event coverage</option><option>Automotive videography</option><option>Video editing</option><option>Social media content</option><option>Promotional video</option></select></label></div><div class="form-row"><label>Preferred date<input type="date" name="date"></label><label>Budget<select name="budget"><option>Choose a range</option><option>Let's discuss</option><option>Under GHS 2,000</option><option>GHS 2,000 – 5,000</option><option>GHS 5,000+</option></select></label></div><label>Project description<textarea name="message" required rows="4" placeholder="Tell me what you have in mind..."></textarea></label><p class="booking-hint">Request a booking through WhatsApp, Snapchat or email. For Snapchat, use Copy brief, open Book via Snapchat, then paste your details into a chat and press Send. You can also message me there directly. Your booking is only confirmed after we agree on the details and availability.</p><div class="booking-actions"><button class="button magnetic" type="submit" id="booking-whatsapp">Continue to WhatsApp <b aria-hidden="true">↗</b></button><a class="quiet-button" id="booking-snapchat" href="https://www.snapchat.com/@kingadom.17" target="_blank" rel="noopener noreferrer">Book via Snapchat ↗</a><button class="quiet-button" type="button" id="booking-email">Use email instead</button><button class="quiet-button" type="button" id="copy-request">Copy brief</button></div><p class="form-confirmation" id="form-confirmation" role="status" aria-live="polite" hidden></p></form></div>
+    </section>
+  </main>
+  <footer><a class="wordmark" href="#home">KINGADOM <span>STUDIOS</span></a><p>© <span id="year"></span> KINGADOM STUDIOS. Visuals that speak.</p><div class="socials"><a href="https://www.instagram.com/kingadom.17?stkn=dXU1dml2amJ4dmZ3&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">IG</a><a href="https://www.tiktok.com/@kingadom.17" target="_blank" rel="noopener" aria-label="TikTok">TK</a><a href="https://www.snapchat.com/@kingadom.17" target="_blank" rel="noopener" aria-label="Snapchat">SC</a><a href="https://wa.me/233545196838" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a><a href="mailto:adombrobbey@gmail.com" aria-label="Email">@</a></div></footer>
+  <dialog class="video-modal" id="video-modal" aria-labelledby="modal-title"><button class="modal-close" aria-label="Close video">×</button><div class="modal-video-wrap"><video id="modal-video" controls playsinline></video><p class="modal-empty" hidden role="status">This film is not available yet. Please try another project.</p></div><div class="modal-caption"><p id="modal-category">Selected work</p><h3 id="modal-title">Project title</h3><span id="modal-description"></span><div class="viewer-actions"><div class="viewer-pagination"><button class="quiet-button" id="previous-film" type="button" aria-label="Previous film">← Previous</button><span id="viewer-position" role="status" aria-live="polite"></span><button class="quiet-button" id="next-film" type="button" aria-label="Next film">Next →</button></div><button class="button" id="book-project" type="button">Create something like this ↗</button></div></div></dialog>
+  <script src="script.js"></script>
+  <script src="fluid-hero.js"></script>
+  <script src="hero-reel.js"></script>
+</body>
+</html>

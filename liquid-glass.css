@@ -1,0 +1,113 @@
+/* A light smoked-glass finish. No new animation loop or full-page blur. */
+:root {
+  --glass-edge: #ffffff24;
+  --glass-sheen: linear-gradient(145deg, #ffffff12, #ffffff02 38%, #ffffff00 68%, #ff686809);
+  --glass-shadow: inset 0 1px 0 #ffffff20, inset 0 -1px 0 #ffffff07, 0 12px 36px #00000024;
+}
+
+/* Small glass surfaces can reveal the moving hero without obscuring the copy. */
+.nav, .nav.scrolled {
+  top: 10px; left: 14px; right: 14px;
+  height: 72px; padding: 0 clamp(16px, 2.5vw, 38px);
+  border: 1px solid var(--glass-edge); border-radius: 22px;
+  background: var(--glass-sheen), #141316f5;
+  box-shadow: var(--glass-shadow);
+}
+.portal-link { border-radius: 999px; background: #ffffff06; border-color: #ffffff2b; }
+.motion-toggle { border-color: #ffffff30; background: var(--glass-sheen), #171419e8; box-shadow: var(--glass-shadow); }
+
+.button, .quiet-button, .service-book, .filters button, .socials a {
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 #ffffff28, inset 0 -1px 0 #00000020;
+}
+.button { background-image: linear-gradient(155deg, #ffffff27, #ffffff00 55%, #00000012); }
+.quiet-button, .service-book, .filters button, .socials a {
+  background: var(--glass-sheen), #17151bcc;
+  border-color: var(--glass-edge);
+}
+.filters button { color: #ccc5c7; }
+.filters button.active, .filters button:hover {
+  color: var(--filter-color, var(--red)); border-color: var(--filter-color, var(--red));
+  background: var(--glass-sheen), #272027;
+  box-shadow: inset 0 1px 0 #ffffff26, 0 5px 20px #00000025;
+}
+.hero-fluid .hero-actions .button {
+  color: #f4fffb; border-color: #e4fff76b;
+  background: linear-gradient(145deg, #ffffff24, #ffffff05 55%, #ffffff13), #0d272edf;
+  box-shadow: inset 0 1px 0 #ffffff60, inset 0 -1px 0 #ffffff17, 0 8px 28px #00111440;
+}
+.hero-fluid .hero-actions .button:hover { background-color: #25464ee8; color: white; }
+
+/* Video pixels stay crisp: reflections sit on the frame and the play control. */
+.project-card {
+  padding: 10px; border: 1px solid #ffffff16; border-radius: 24px;
+  background: var(--glass-sheen), #131114d9;
+  box-shadow: var(--glass-shadow);
+}
+.project-media { border-radius: 16px; border-color: #ffffff20; }
+.project-meta { margin: 0; padding: 20px 12px 14px; }
+.project-meta > span { color: #beb6b8; }
+.project-media::after {
+  background: radial-gradient(350px circle at var(--shine-x, 50%) var(--shine-y, 50%), #ffffff16, transparent 75%), linear-gradient(135deg, #ffffff0c, transparent 32%);
+  opacity: .4; box-shadow: inset 0 1px 0 #ffffff2c;
+  border-radius: inherit;
+}
+.play::before {
+  background: linear-gradient(145deg, #ffffff22, #ffffff05), #101015c9;
+  box-shadow: inset 0 1px 0 #ffffff50, inset 0 -1px 0 #ffffff12, 0 8px 24px #00000035;
+}
+.play:hover::before, .play:focus-visible::before { background: linear-gradient(145deg, #ffffff30, #ffffff08), #20191edb; }
+.project-card[data-status="coming-soon"] .play::before { border-radius: 999px; }
+
+.booking-form {
+  padding: clamp(18px, 3vw, 32px); border: 1px solid var(--glass-edge); border-radius: 24px;
+  background: var(--glass-sheen), #131115e8; box-shadow: var(--glass-shadow);
+}
+.booking-form label { color: #c5bec1; }
+.booking-form input:not([type="hidden"]), .booking-form textarea, .booking-form select {
+  padding: 14px; border: 1px solid #ffffff24; border-radius: 12px;
+  background: linear-gradient(150deg, #ffffff05, transparent), #09090bc7;
+  box-shadow: inset 0 1px 4px #00000020;
+}
+.booking-form input:focus, .booking-form textarea:focus, .booking-form select:focus {
+  border-color: var(--red); box-shadow: 0 0 0 3px #ff353b22;
+}
+.booking-selection, .form-confirmation { border-radius: 14px; }
+.video-modal { border-radius: 22px; border-color: #ffffff30; background: var(--glass-sheen), #131115; box-shadow: var(--glass-shadow); }
+.modal-close { top: 10px; right: 10px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #ffffff40; color: #fff; background: #7b1920e8; box-shadow: inset 0 1px 0 #ffffff35; }
+
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .nav, .nav.scrolled {
+    background: var(--glass-sheen), #111014c9;
+    -webkit-backdrop-filter: blur(16px) saturate(135%);
+    backdrop-filter: blur(16px) saturate(135%);
+  }
+  .hero-fluid .hero-actions .button, .play::before {
+    -webkit-backdrop-filter: blur(8px) saturate(125%);
+    backdrop-filter: blur(8px) saturate(125%);
+  }
+}
+@media (max-width: 980px) {
+  .nav-links { border: 1px solid #ffffff2b; border-radius: 18px; background: var(--glass-sheen), #151318fa; box-shadow: var(--glass-shadow); }
+}
+@media (max-width: 760px) {
+  .nav, .nav.scrolled { top: 8px; left: 8px; right: 8px; height: 64px; padding: 0 16px; border-radius: 18px; }
+  .project-card { padding: 7px; border-radius: 20px; }
+  .project-media { border-radius: 13px; }
+  .project-meta { padding: 16px 9px 12px; }
+  .booking-form { padding: 18px; gap: 20px; border-radius: 20px; }
+  .nav, .nav.scrolled { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .nav, .nav.scrolled, .motion-toggle, .project-card, .booking-form,
+  .hero-fluid .hero-actions .button, .play::before {
+    background: #171419; -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+}
+@media (forced-colors: active) {
+  .nav, .nav.scrolled, .project-card, .booking-form, .video-modal,
+  .button, .quiet-button, .service-book, .filters button, .play::before {
+    background: Canvas; color: CanvasText; border: 1px solid CanvasText;
+    box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+}

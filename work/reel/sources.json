@@ -1,0 +1,158 @@
+[
+  {
+    "index": 1,
+    "category": "events",
+    "file": "videos/event-02.mp4",
+    "title": "Oakland Awards Night ’26",
+    "duration": 23.84,
+    "times": [
+      4.2912,
+      9.0592,
+      13.8272,
+      18.595200000000002
+    ]
+  },
+  {
+    "index": 2,
+    "category": "events",
+    "file": "videos/event-03.mp4",
+    "title": "Oakland Awards Night ’26",
+    "duration": 63.78,
+    "times": [
+      11.4804,
+      24.2364,
+      36.992399999999996,
+      49.748400000000004
+    ]
+  },
+  {
+    "index": 3,
+    "category": "events",
+    "file": "videos/presec-speech-day-01.mp4",
+    "title": "Presec Speech Day",
+    "duration": 30.4,
+    "times": [
+      5.4719999999999995,
+      11.552,
+      17.631999999999998,
+      23.712
+    ]
+  },
+  {
+    "index": 4,
+    "category": "events",
+    "file": "videos/presec-speech-day-02.mp4",
+    "title": "Presec Speech Day",
+    "duration": 63.04,
+    "times": [
+      11.347199999999999,
+      23.9552,
+      36.563199999999995,
+      49.1712
+    ]
+  },
+  {
+    "index": 5,
+    "category": "events",
+    "file": "videos/vintage-gala.mp4",
+    "title": "Vintage Gala",
+    "duration": 64,
+    "times": [
+      11.52,
+      24.32,
+      37.12,
+      49.92
+    ]
+  },
+  {
+    "index": 6,
+    "category": "events",
+    "file": "videos/presec-talent-show.mp4",
+    "title": "Presec Talent Show",
+    "duration": 45.1,
+    "times": [
+      8.118,
+      17.138,
+      26.157999999999998,
+      35.178000000000004
+    ]
+  },
+  {
+    "index": 7,
+    "category": "events",
+    "file": "videos/supercar-spectacle-26.mp4",
+    "title": "Supercar Spectacle ’26",
+    "duration": 100.8,
+    "times": [
+      18.144,
+      38.304,
+      58.46399999999999,
+      78.624
+    ]
+  },
+  {
+    "index": 8,
+    "category": "social",
+    "file": "videos/cafe-boho.mp4",
+    "title": "Cafe Boho",
+    "duration": 62.97,
+    "times": [
+      11.3346,
+      23.9286,
+      36.5226,
+      49.1166
+    ]
+  },
+  {
+    "index": 9,
+    "category": "editing",
+    "file": "videos/editing-asake.mp4",
+    "title": "ASAKE",
+    "duration": 33.09,
+    "times": [
+      5.956200000000001,
+      12.574200000000001,
+      19.1922,
+      25.810200000000002
+    ]
+  },
+  {
+    "index": 10,
+    "category": "editing",
+    "file": "videos/editing-demon-slayer-4k.mp4",
+    "title": "Demon Slayer",
+    "duration": 35.69,
+    "times": [
+      6.424199999999999,
+      13.562199999999999,
+      20.7002,
+      27.8382
+    ]
+  },
+  {
+    "index": 11,
+    "category": "editing",
+    "file": "videos/editing-demon-slayer-ashawo.mp4",
+    "title": "Demon Slayer x Ashawo",
+    "duration": 45.05,
+    "times": [
+      8.109,
+      17.119,
+      26.128999999999998,
+      35.138999999999996
+    ]
+  },
+  {
+    "index": 12,
+    "category": "editing",
+    "file": "videos/editing-kingadom.mp4",
+    "title": "Ghana Auto Shows",
+    "duration": 61.04,
+    "times": [
+      10.9872,
+      23.1952,
+      35.4032,
+      47.611200000000004
+    ]
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "file": "videos/event-02.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\event-02.mp4",
+    "before": 5765390,
+    "after": 5313460,
+    "replace": true,
+    "optimized": "work\\optimized\\event-02.mp4",
+    "originalHash": "e738cfeb3b1cb572b2057f9cef0107f58f72f7904b59295bd6a4e56d83e118cd",
+    "duration": 23.84
+  },
+  {
+    "file": "videos/event-03.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\event-03.mp4",
+    "before": 18642591,
+    "after": 15128225,
+    "replace": true,
+    "optimized": "work\\optimized\\event-03.mp4",
+    "originalHash": "48a8e4275c82bd4e77ac2311c48c6f0087bb85dce7edce7a6e42e9ca1c4b2f87",
+    "duration": 63.78
+  },
+  {
+    "file": "videos/presec-speech-day-01.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\presec-speech-day-01.mp4",
+    "before": 10549639,
+    "after": 6755131,
+    "replace": true,
+    "optimized": "work\\optimized\\presec-speech-day-01.mp4",
+    "originalHash": "efd3ffecf0df34c81dc6d9d888bb85711068caed2d85c762bc71f4972a2e657b",
+    "duration": 30.4
+  },
+  {
+    "file": "videos/presec-speech-day-02.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\presec-speech-day-02.mp4",
+    "before": 23591033,
+    "after": 14699632,
+    "replace": true,
+    "optimized": "work\\optimized\\presec-speech-day-02.mp4",
+    "originalHash": "7eb91f5262047383dbea2d56f84efee1191c14fb3aefa3e0255b42e13d629657",
+    "duration": 63.04
+  },
+  {
+    "file": "videos/vintage-gala.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\vintage-gala.mp4",
+    "before": 24427245,
+    "after": 14954324,
+    "replace": true,
+    "optimized": "work\\optimized\\vintage-gala.mp4",
+    "originalHash": "026d5e4de5b7f0fc8b56ef4a1e108021ecafe405c493eafd5f70a422aedc0094",
+    "duration": 64
+  },
+  {
+    "file": "videos/presec-talent-show.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\presec-talent-show.mp4",
+    "before": 17281943,
+    "after": 10916837,
+    "replace": true,
+    "optimized": "work\\optimized\\presec-talent-show.mp4",
+    "originalHash": "609f4b23449fc236a1cf4eeef8b6d993e79fc76dbaaff8931683372ba2b33c9a",
+    "duration": 45.1
+  },
+  {
+    "file": "videos/supercar-spectacle-26.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\supercar-spectacle-26.mp4",
+    "before": 56577999,
+    "after": 22464912,
+    "replace": true,
+    "optimized": "work\\optimized\\supercar-spectacle-26.mp4",
+    "originalHash": "b243d9ac8fcef917ad55a5f2af2e5d5acda0954df589db9319c06e13ec920a31",
+    "duration": 100.8
+  },
+  {
+    "file": "videos/cafe-boho.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\cafe-boho.mp4",
+    "before": 108352631,
+    "after": 14713693,
+    "replace": true,
+    "optimized": "work\\optimized\\cafe-boho.mp4",
+    "originalHash": "53fa6b05b8ae9742ae50a75c53c1ab8bf65a4389b389775853df761fcba74a54",
+    "duration": 62.97
+  },
+  {
+    "file": "videos/editing-asake.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\editing-asake.mp4",
+    "before": 100289668,
+    "after": 6067911,
+    "replace": true,
+    "optimized": "work\\optimized\\editing-asake.mp4",
+    "originalHash": "92bb27e1c5497883817897cad3285f468ff6efd066b0f0d4803a1e068ec75c6a",
+    "duration": 33.09
+  },
+  {
+    "file": "videos/editing-demon-slayer-4k.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\editing-demon-slayer-4k.mp4",
+    "before": 107058507,
+    "after": 6794387,
+    "replace": true,
+    "optimized": "work\\optimized\\editing-demon-slayer-4k.mp4",
+    "originalHash": "17260d84f6ba11532a94853113c9a53b1f88c4489400d81dd8f79cb12ce067bd",
+    "duration": 35.69
+  },
+  {
+    "file": "videos/editing-demon-slayer-ashawo.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\editing-demon-slayer-ashawo.mp4",
+    "before": 162936987,
+    "after": 10171105,
+    "replace": true,
+    "optimized": "work\\optimized\\editing-demon-slayer-ashawo.mp4",
+    "originalHash": "278d9d003d32fb458dd429c6f6556ceb73bd68dc122d4a9e573007da04f710d4",
+    "duration": 45.05
+  },
+  {
+    "file": "videos/editing-kingadom.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\editing-kingadom.mp4",
+    "before": 17330106,
+    "after": 14618513,
+    "replace": true,
+    "optimized": "work\\optimized\\editing-kingadom.mp4",
+    "originalHash": "8b59c1f11b44ed32d821c0472c1ed41138a99106a386f35086e8a53d89c50792",
+    "duration": 61.04
+  },
+  {
+    "file": "videos/homepage-showreel.mp4",
+    "original": "C:\\Users\\adomb\\Documents\\Codex\\kingadom-video-originals-2026-09-10\\homepage-showreel.mp4",
+    "before": 14027793,
+    "after": 3857389,
+    "replace": true,
+    "optimized": "work\\optimized\\homepage-showreel.mp4",
+    "originalHash": "ee61d0af1afeaa0eca89390ec3482738363374d967f67fe68915feb2a9ff554c",
+    "duration": 35.83
+  }
+]

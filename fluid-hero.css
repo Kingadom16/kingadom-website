@@ -1,0 +1,45 @@
+/* GPU-painted opening scene. The rest of the portfolio retains its red/black theme. */
+.hero-fluid { min-height: max(740px, 100svh); padding: 160px 6vw 270px; background: radial-gradient(ellipse at 70% 30%, #17666b, #04151f 70%); }
+.hero-fluid .fluid-canvas { position: absolute; inset: 0; z-index: 0; display: block; width: 100%; height: 100%; visibility: hidden; pointer-events: none; touch-action: pan-y; opacity: .24; }
+.hero-showreel { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; z-index: 0; }
+.hero-fluid.fluid-ready .fluid-canvas { visibility: visible; }
+.hero-fluid.fluid-still .fluid-canvas { touch-action: pan-y; }
+.fluid-shade { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, #010a1166, #010a1122 38%, #010a1166 68%, #090909e8); }
+.hero-fluid .hero-content { position: static; text-align: center; pointer-events: none; }
+.hero-fluid .eyebrow { position: relative; justify-content: center; max-width: none; margin-bottom: 52px; color: #e5eeec; }
+.hero-fluid .hero-title { position: relative; margin-bottom: 0; text-shadow: 0 4px 50px #03141966; }
+.hero-fluid .hero-studio-line { margin-top: .27em; font-size: .20em; letter-spacing: .48em; line-height: 1.4; padding-left: .48em; }
+.hero-fluid .hero-studio-line > span { color: #ff6969; }
+.hero-fluid .hero-bottom { position: absolute; bottom: 82px; left: 0; right: 0; margin-inline: auto; transform: none; display: flex; flex-direction: column; gap: 22px; width: calc(100% - 48px); max-width: 550px; animation: none; }
+.hero-fluid .hero-bottom > p { max-width: 420px; margin: 0; color: #e6eeec; font-size: 1rem; line-height: 1.65; }
+.hero-fluid .hero-actions { justify-content: center; margin: 0; pointer-events: auto; }
+.hero-fluid .hero-actions .button { border-radius: 999px; border: 1px solid #e7fff4aa; color: #062b2d; background: #e7fff4; padding: 17px 28px; box-shadow: 0 8px 40px #00141955; }
+.hero-fluid .hero-actions .button:hover { background: #fff; box-shadow: 0 8px 36px #9bece533; }
+.hero-fluid .hero-actions .text-link { color: #f6ecea; }
+.hero-fluid .hero-glow, .hero-fluid .hero-grid, .hero-fluid .hero-spotlight, .hero-fluid .hero-orbit { display: none; }
+.hero-fluid .equip { opacity: .15; }
+.hero-fluid .equip-camera { top: 24%; right: 2%; }
+.hero-fluid .equip-tripod { bottom: 30%; right: 4%; }
+.hero-fluid .equip-lens, .hero-fluid .equip-timeline, .hero-fluid .equip-card, .hero-fluid .equip-mouse { opacity: .10; }
+.hero-fluid .app-cloud > span { opacity: .26; }
+.fluid-draw-cue { position: absolute; z-index: 6; top: 46%; right: 8%; display: none; align-items: center; justify-content: center; width: 96px; height: 96px; border: 1px solid #defff6a8; border-radius: 50%; color: #e6fff6; font: .75rem var(--mono); text-transform: uppercase; pointer-events: none; }
+.fluid-ready:not(.fluid-still) .fluid-draw-cue { display: flex; }
+.fluid-hint { position: absolute; z-index: 6; bottom: 30px; left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px); margin: 0; font: .75rem/1.5 var(--mono); color: #ddece9; text-align: center; pointer-events: none; }
+.hero-fluid .scroll-cue { bottom: 32px; left: 4%; color: #d5e3e0; }
+.js:not(.page-ready) .fluid-draw-cue, .js:not(.page-ready) .fluid-hint { visibility: hidden; }
+@media (max-width: 1000px) { .hero-fluid .scroll-cue { display: none; } .fluid-draw-cue { right: 3%; width: 76px; height: 76px; top: 54%; } }
+@media (max-width: 760px) {
+  .hero-fluid { min-height: max(740px, 100svh); padding: 165px 5vw 300px; }
+  .hero-fluid .eyebrow { font-size: .75rem; max-width: 100%; gap: 10px; margin: 0 auto 48px; }
+  .hero-fluid .hero-title { font-size: clamp(2rem, 12.15vw, 6rem); }
+  .hero-fluid .hero-bottom { bottom: 115px; max-width: 400px; gap: 20px; }
+  .hero-fluid .hero-bottom > p { max-width: 330px; }
+  .hero-fluid .hero-actions { gap: 20px; flex-wrap: wrap; }
+  .hero-fluid .hero-actions .text-link { font-size: .8rem; }
+  .fluid-draw-cue { top: auto; bottom: 315px; right: calc(50% - 34px); width: 68px; height: 68px; font-size: .7rem; }
+  .fluid-hint { bottom: 75px; font-size: .75rem; }
+  .hero-fluid .equip-camera { top: 16%; right: 3%; }
+  .hero-fluid .equip-tripod { right: 2%; bottom: 40%; }
+  .hero-fluid .app-cloud > span { opacity: .18; }
+}
+@media (prefers-reduced-motion: reduce) { .fluid-draw-cue { display: none !important; } .hero-fluid .fluid-canvas { touch-action: pan-y; } }
