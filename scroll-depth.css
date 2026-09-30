@@ -1,0 +1,27 @@
+/* Scroll follows the visitor's normal movement; the page keeps its natural flow. */
+.hero-fluid, .section, .service-list { perspective: 1400px; }
+.scroll-depth {
+  translate: 0 var(--scroll-y, 0px) var(--scroll-z, 0px);
+  rotate: x var(--scroll-rx, 0deg);
+  scale: var(--scroll-scale, 1);
+  transform-origin: center center;
+  backface-visibility: hidden;
+}
+.project-media {
+  transform: perspective(1100px) translateZ(var(--scroll-z, 0px))
+    rotateX(calc(var(--tilt-x, 0deg) + var(--scroll-rx, 0deg)))
+    rotateY(calc(var(--tilt-y, 0deg) + var(--scroll-ry, 0deg)))
+    scale(var(--scroll-scale, 1));
+  transition: border-color .4s, box-shadow .4s;
+  backface-visibility: hidden;
+}
+.wizkid-feature { border-color: #b995ff65; }
+.wizkid-feature .project-media { box-shadow: 0 22px 65px #0008, 0 0 35px #9b6dff12; }
+.motion-paused .scroll-depth, .modal-open .scroll-depth,
+.scroll-depth:focus-within { translate: none; rotate: none; scale: none; }
+.motion-paused .project-media, .modal-open .project-media,
+.project-card:focus-within .project-media { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .scroll-depth { translate: none; rotate: none; scale: none; }
+  .project-media { transform: none; }
+}

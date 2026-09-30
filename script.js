@@ -42,6 +42,40 @@ document.addEventListener('DOMContentLoaded', () => {
   let introTimer;
   const motionAnimations = new Set();
   const floaters = [];
+  const scrollLayers = [...document.querySelectorAll('.hero-title, .hero-bottom, .hero .eyebrow, .section-heading, .meet-copy, .about-copy, .service, .contact-info')]
+    .map(element => {
+      element.classList.add('scroll-depth');
+      return { element, anchor: element.closest('section') };
+    });
+
+  // Read stable layout anchors, then paint depth without changing document flow.
+  function updateScrollDepth() {
+    const enabled = motionEnabled && !modal.open;
+    const strength = innerWidth <= 760 ? .45 : 1;
+    const viewport = Math.max(1, innerHeight);
+    const clamp = value => Math.max(-1, Math.min(1, value));
+    const layers = scrollLayers.map(({ element, anchor }) => {
+      const rect = anchor.getBoundingClientRect();
+      return { element, amount: enabled ? clamp((rect.top + Math.min(rect.height, viewport) * .5 - viewport * .5) / viewport) : 0 };
+    });
+    const films = visibleCards.map((card, index) => {
+      const rect = card.getBoundingClientRect();
+      return { card, index, amount: enabled && !card.classList.contains('hidden') ? clamp((rect.top + rect.height * .5 - viewport * .5) / (viewport * .8)) : 0 };
+    });
+    layers.forEach(({ element, amount }) => {
+      element.style.setProperty('--scroll-y', (amount * 42 * strength).toFixed(2) + 'px');
+      element.style.setProperty('--scroll-z', (-Math.abs(amount) * 55 * strength).toFixed(2) + 'px');
+      element.style.setProperty('--scroll-rx', (-amount * 7 * strength).toFixed(2) + 'deg');
+      element.style.setProperty('--scroll-scale', (1 - Math.abs(amount) * .025 * strength).toFixed(4));
+    });
+    films.forEach(({ card, index, amount }) => {
+      const media = card.querySelector('.project-media');
+      media.style.setProperty('--scroll-rx', (-amount * 11 * strength).toFixed(2) + 'deg');
+      media.style.setProperty('--scroll-ry', (amount * (index % 2 ? -7 : 7) * strength).toFixed(2) + 'deg');
+      media.style.setProperty('--scroll-z', (-Math.abs(amount) * 85 * strength).toFixed(2) + 'px');
+      media.style.setProperty('--scroll-scale', (1 - Math.abs(amount) * .035 * strength).toFixed(4));
+    });
+  }
 
   // Use distinct elements for ambient floating and pointer movement.
   document.querySelectorAll('.equip, .app-cloud > span').forEach((element, index) => {
@@ -75,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateMotion() {
     motionEnabled = !manualPause && !reducedMotion.matches;
+    scrollDirty = true;
     root.classList.toggle('motion-running', motionEnabled);
     root.classList.toggle('motion-paused', !motionEnabled);
     motionButton.setAttribute('aria-pressed', String(!motionEnabled));
@@ -217,6 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
     frameId = 0;
     if (document.hidden) return;
     if (scrollDirty) {
+      updateScrollDepth();
       const max = document.documentElement.scrollHeight - innerHeight;
       const fraction = max > 0 ? Math.max(0, Math.min(1, scrollY / max)) : 0;
       progress.style.transform = 'scaleX(' + fraction + ')';

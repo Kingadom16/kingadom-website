@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const assert = require('node:assert/strict');
 const html = fs.readFileSync('index.html', 'utf8');
 const films = [
+  ['editing-wizkid.mp4', 'wizkid edit', 'editing'],
   ['presec-speech-day-01.mp4', 'Presec Speech Day', 'events'],
   ['presec-speech-day-02.mp4', 'Presec Speech Day', 'events'],
   ['vintage-gala.mp4', 'Vintage Gala', 'events'],

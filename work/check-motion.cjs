@@ -102,12 +102,18 @@ async function scenario({reduced=false,fine=true,observer=true,clipboard=true,sa
   assert.equal(shown().length,7,'events contains two awards films and five new event films');
   const events=document.querySelector('[data-filter="events"]'),editing=document.querySelector('[data-filter="editing"]');
   await Promise.all([editing.fire('click'),events.fire('click'),editing.fire('click')]);
-  assert.equal(shown().length,8,'rapid filter changes keep the final selection');
+  assert.equal(shown().length,9,'rapid filter changes keep the final selection');
   assert(shown().every(c=>c.dataset.category==='editing'));
   const card=shown()[0],video=card.querySelector('video');
   await window.fire('pointermove',{target:card.querySelector('.play'),pointerType:fine?'mouse':'touch',clientX:120,clientY:100});settleFrames();
   context.scrollY=1000;await window.fire('scroll');settleFrames();
   assert(document.querySelector('.scroll-progress span').style.transform.startsWith('scaleX('));
+  const depthLayer=document.querySelector('.hero-title');
+  const initialDepth=depthLayer.style['--scroll-rx'];
+  depthLayer.closest('section').offsetTop=-500;
+  await window.fire('scroll');settleFrames();
+  if(reduced)assert.equal(parseFloat(depthLayer.style['--scroll-rx']),0,'reduced motion keeps depth still');
+  else assert.notEqual(depthLayer.style['--scroll-rx'],initialDepth,'scrolling changes the layer depth');
   await card.fire('pointerenter',{pointerType:fine?'mouse':'touch'});
   assert.equal(video.paused,true,'brief fly-by hovers do not start downloads');
   for(const [key,timer] of [...timers])if(timer.ms===250){timers.delete(key);timer.fn();}
@@ -116,15 +122,16 @@ async function scenario({reduced=false,fine=true,observer=true,clipboard=true,sa
   await card.fire('click',{target:card.querySelector('.play')});
   assert(document.querySelector('dialog').open);
   assert(video.paused,'preview pauses before full film opens');
-  assert.equal(document.querySelector('#viewer-position').textContent,'1 / 8');
+  assert.equal(document.querySelector('#viewer-position').textContent,'1 / 9');
+  assert.equal(document.querySelector('#modal-title').textContent,'wizkid edit');
   assert.equal(document.querySelector('#previous-film').disabled,true);
   await document.querySelector('#next-film').fire('click');
-  assert.equal(document.querySelector('#modal-title').textContent,'Ready Player One');
+  assert.equal(document.querySelector('#modal-title').textContent,'GTA trailer');
   await document.querySelector('dialog').fire('keydown',{key:'ArrowRight',target:document.querySelector('#next-film')});
-  assert.equal(document.querySelector('#modal-title').textContent,'Bombele — Black &amp; White');
+  assert.equal(document.querySelector('#modal-title').textContent,'Ready Player One');
   await document.querySelector('#previous-film').fire('click');
   await document.querySelector('#book-project').fire('click');
-  assert.equal(document.querySelector('#project-reference').value,'Ready Player One');
+  assert.equal(document.querySelector('#project-reference').value,'GTA trailer');
   assert.equal(document.querySelector('select[name="service"]').value,'Video editing');
   assert(!document.querySelector('dialog').open,'film reference booking closes viewer');
   assert(!document.querySelector('#booking-selection').hidden);
@@ -142,7 +149,7 @@ async function scenario({reduced=false,fine=true,observer=true,clipboard=true,sa
   await document.querySelector('#booking-email').fire('click');
   assert(window.location.href.startsWith('mailto:adombrobbey@gmail.com?'));
   assert(window.location.href.includes('%26'),'form body remains encoded');
-  assert(decodeURIComponent(window.location.href).includes('FILM REFERENCE: Ready Player One'));
+  assert(decodeURIComponent(window.location.href).includes('FILM REFERENCE: GTA trailer'));
   assert(!document.querySelector('#form-confirmation').hidden);
   await document.querySelector('#clear-reference').fire('click');
   assert.equal(document.querySelector('#project-reference').value,'');
@@ -159,6 +166,8 @@ async function scenario({reduced=false,fine=true,observer=true,clipboard=true,sa
   await document.querySelector('#copy-request').fire('click');
   if(clipboard)assert(copied.includes('SERVICE: Promotional video'));
   if(!reduced){await document.querySelector('.motion-toggle').fire('click');assert(document.documentElement.classList.contains('motion-paused'));assert(document.querySelectorAll('.reveal-pending').length===0);}
+  settleFrames();
+  assert.equal(parseFloat(depthLayer.style['--scroll-rx']),0,'pause resets scroll depth');
   document.hidden=true;await document.fire('visibilitychange');assert.equal(frames.size,0);
   console.log('PASS',JSON.stringify({reduced,fine,observer,clipboard}));
 }
