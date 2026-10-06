@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
 const html = fs.readFileSync('index.html', 'utf8');
 const cards = [...html.matchAll(/<article\b[^>]*class="project-card[^>]*>[\s\S]*?<\/article>/g)].map(m => m[0]);
-assert.equal(cards.length, 17);
+assert.equal(cards.length, 19);
 let previewBytes = 0, posterBytes = 0;
 for(const card of cards) {
   assert.ok(!/<source\b[^>]*\bsrc=/.test(card), 'cards never preload full movies');

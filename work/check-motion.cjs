@@ -99,10 +99,10 @@ async function scenario({reduced=false,fine=true,observer=true,clipboard=true,sa
   assert.equal(document.querySelectorAll('.app-cloud > span > .floating-visual').length,6);
   await document.querySelector('[data-filter="events"]').fire('click');
   const shown=()=>document.querySelectorAll('.project-card').filter(c=>['events','editing','social'].includes(c.dataset.category)&&!c.classList.contains('hidden'));
-  assert.equal(shown().length,7,'events contains two awards films and five new event films');
+  assert.equal(shown().length,8,'events includes Freshers Night');
   const events=document.querySelector('[data-filter="events"]'),editing=document.querySelector('[data-filter="editing"]');
   await Promise.all([editing.fire('click'),events.fire('click'),editing.fire('click')]);
-  assert.equal(shown().length,9,'rapid filter changes keep the final selection');
+  assert.equal(shown().length,10,'rapid filter changes keep the final selection');
   assert(shown().every(c=>c.dataset.category==='editing'));
   const card=shown()[0],video=card.querySelector('video');
   await window.fire('pointermove',{target:card.querySelector('.play'),pointerType:fine?'mouse':'touch',clientX:120,clientY:100});settleFrames();
@@ -122,7 +122,7 @@ async function scenario({reduced=false,fine=true,observer=true,clipboard=true,sa
   await card.fire('click',{target:card.querySelector('.play')});
   assert(document.querySelector('dialog').open);
   assert(video.paused,'preview pauses before full film opens');
-  assert.equal(document.querySelector('#viewer-position').textContent,'1 / 9');
+  assert.equal(document.querySelector('#viewer-position').textContent,'1 / 10');
   assert.equal(document.querySelector('#modal-title').textContent,'wizkid edit');
   assert.equal(document.querySelector('#previous-film').disabled,true);
   await document.querySelector('#next-film').fire('click');
